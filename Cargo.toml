@@ -1,0 +1,21 @@
+[package]
+name = "libp2p-push"
+version = "0.1.0"
+authors = ["Jason NI (nixin) <nixin@clustertech.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "=0.2.13", features = ["rt-core", "rt-threaded", "rt-util", "io-driver", "io-std", "io-util", "net", "tcp", "time"]}
+tokio-nats = { path = "../tokio-nats" }
+bytes = "0.5"
+env_logger = "0.7.1"
+futures = "0.3.1"
+futures_codec = "0.3.4"
+futures-util = "0.3"
+futures-timer = "2.0.2"
+libp2p = { path = "../rust-libp2p" }
+log = "0.4.1"
+thiserror = "1.0.11"
+unsigned-varint = { version = "0.3", features = ["futures-codec"] }
